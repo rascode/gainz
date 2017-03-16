@@ -15,6 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        //Substitute Storyboard default view with UIWindow in Code
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible() // Necessary to display window
+        
+        //Assign the Default "View Controller" as the Initial/Root View Conroller for the application
+        window?.rootViewController = UINavigationController(rootViewController: ViewController())
+        
         return true
     }
 
